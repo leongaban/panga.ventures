@@ -1,0 +1,9 @@
+{
+  "name": "panga.ventures",
+  "version": "1.0.0",
+  "description": "Panga Ventures | Early seed token investors",
+  "main": "index.js",
+  "repository": "https://github.com/leongaban/panga.ventures.git",
+  "author": "leongaban <leongaban@gmail.com>",
+  "license": "MIT"
+}
