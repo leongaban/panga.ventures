@@ -2,20 +2,96 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Panga Ventures</title>
+        <title>Panga Ventures | Angel Investors</title>
         <script src="https://unpkg.com/vue@3.0.2"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div id="app">
-            <h1 :style="css.headerTitle">Panga Ventures</h1>
-            <p>{{ title }} - {{ author }} - {{ age }}</p>
+        <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B7GJ5PE8S"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-            <button v-on:click="age++">Increase Age</button>
-            <button v-on:click="age--">Decrease Age</button>
-            <div @click="changeTitle">Decrease Age</div>
+            gtag('config', 'G-2B7GJ5PE8S');
+        </script>
+        <style>
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            footer, header, menu, nav, section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+                background: #fff;
+                text-align: center;
+            }
+            /* img {
+                text-align: center;
+                width: 100%;
+                height: auto;
+            } */
+            /* .bg {
+                font-family: 'Didact Gothic', sans-serif;
+                height: 100%;
+                background-image: url('src/imgs/bg.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }*/
+            .splash {
+                width: 1024px;
+                height: 420px;
+            }
+            .calendy img {
+                margin-top: 20px;
+                margin-bottom: 40px;
+            }
+            footer a img {
+                margin-right: 20px;
+            }
+            @media only screen and (max-width: 640px) {
+                .splash {
+                    width: 100%;
+                    height: auto;
+                }
+                .calendy img {
+                    margin-top: 0;
+                }
+                footer a img {
+                    margin-bottom: 40px;
+                }
+                .bg p {
+                    width: 420px;
+                    line-height: 32px;
+                }
+            }
+        </style>
+    </head>
+    <body :style="css.body">
+        <div id="app" class="bg">
+            <img class="splash" src="src/imgs/splash.png"/>
+            <div class="copy"> 
+                <footer>
+                    <a target="_blank" href="https://twitter.com/leongaban">
+                        <img class="monke" src="src/imgs/leon.jpeg"/>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/mittinvests">
+                        <img class="monke" src="src/imgs/mitt.jpeg"/>
+                    </a>
+                </footer>
+                <a class="calendy" target="_blank" href="https://calendly.com/pangaventures">
+                    <img src="src/imgs/calendy.png"/>
+                </a>
+            </div>
         </div>
         <script src="src/app.js"></script>
     </body>
